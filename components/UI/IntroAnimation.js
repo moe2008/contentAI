@@ -1,0 +1,268 @@
+import React, { useEffect } from "react";
+
+const IntroAnimation = () => {
+  useEffect(() => {
+    const anim = () => {
+      const introAnim = document.querySelector(".introAnim");
+      const hAnim = document.querySelector(".hAnim");
+      const main = document.querySelector(".mainAnim");
+      console.log(main);
+      introAnim.classList.add("animate-mask");
+      hAnim.classList.add("hAnim2");
+      main.classList.add("mainAnim2");
+    };
+    anim();
+  }, []);
+
+  return (
+    <div className="absolute w-screen h-screen bg-black top-0 left-0 z-10 introAnim flex items-center justify-center">
+      <h1 className="text-white hAnim">Loading...</h1>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="2em"
+        height="2em"
+        viewBox="0 0 24 24"
+        className="hAnim"
+      >
+        <rect width="7.33" height="7.33" x="1" y="1" fill="white">
+          <animate
+            id="svgSpinnersBlocksWave0"
+            attributeName="x"
+            begin="0;svgSpinnersBlocksWave1.end+0.3s"
+            dur="0.9s"
+            values="1;4;1"
+          />
+          <animate
+            attributeName="y"
+            begin="0;svgSpinnersBlocksWave1.end+0.3s"
+            dur="0.9s"
+            values="1;4;1"
+          />
+          <animate
+            attributeName="width"
+            begin="0;svgSpinnersBlocksWave1.end+0.3s"
+            dur="0.9s"
+            values="7.33;1.33;7.33"
+          />
+          <animate
+            attributeName="height"
+            begin="0;svgSpinnersBlocksWave1.end+0.3s"
+            dur="0.9s"
+            values="7.33;1.33;7.33"
+          />
+        </rect>
+        <rect width="7.33" height="7.33" x="8.33" y="1" fill="white">
+          <animate
+            attributeName="x"
+            begin="svgSpinnersBlocksWave0.begin+0.15s"
+            dur="0.9s"
+            values="8.33;11.33;8.33"
+          />
+          <animate
+            attributeName="y"
+            begin="svgSpinnersBlocksWave0.begin+0.15s"
+            dur="0.9s"
+            values="1;4;1"
+          />
+          <animate
+            attributeName="width"
+            begin="svgSpinnersBlocksWave0.begin+0.15s"
+            dur="0.9s"
+            values="7.33;1.33;7.33"
+          />
+          <animate
+            attributeName="height"
+            begin="svgSpinnersBlocksWave0.begin+0.15s"
+            dur="0.9s"
+            values="7.33;1.33;7.33"
+          />
+        </rect>
+        <rect width="7.33" height="7.33" x="1" y="8.33" fill="white">
+          <animate
+            attributeName="x"
+            begin="svgSpinnersBlocksWave0.begin+0.15s"
+            dur="0.9s"
+            values="1;4;1"
+          />
+          <animate
+            attributeName="y"
+            begin="svgSpinnersBlocksWave0.begin+0.15s"
+            dur="0.9s"
+            values="8.33;11.33;8.33"
+          />
+          <animate
+            attributeName="width"
+            begin="svgSpinnersBlocksWave0.begin+0.15s"
+            dur="0.9s"
+            values="7.33;1.33;7.33"
+          />
+          <animate
+            attributeName="height"
+            begin="svgSpinnersBlocksWave0.begin+0.15s"
+            dur="0.9s"
+            values="7.33;1.33;7.33"
+          />
+        </rect>
+        <rect width="7.33" height="7.33" x="15.66" y="1" fill="white">
+          <animate
+            attributeName="x"
+            begin="svgSpinnersBlocksWave0.begin+0.3s"
+            dur="0.9s"
+            values="15.66;18.66;15.66"
+          />
+          <animate
+            attributeName="y"
+            begin="svgSpinnersBlocksWave0.begin+0.3s"
+            dur="0.9s"
+            values="1;4;1"
+          />
+          <animate
+            attributeName="width"
+            begin="svgSpinnersBlocksWave0.begin+0.3s"
+            dur="0.9s"
+            values="7.33;1.33;7.33"
+          />
+          <animate
+            attributeName="height"
+            begin="svgSpinnersBlocksWave0.begin+0.3s"
+            dur="0.9s"
+            values="7.33;1.33;7.33"
+          />
+        </rect>
+        <rect width="7.33" height="7.33" x="8.33" y="8.33" fill="white">
+          <animate
+            attributeName="x"
+            begin="svgSpinnersBlocksWave0.begin+0.3s"
+            dur="0.9s"
+            values="8.33;11.33;8.33"
+          />
+          <animate
+            attributeName="y"
+            begin="svgSpinnersBlocksWave0.begin+0.3s"
+            dur="0.9s"
+            values="8.33;11.33;8.33"
+          />
+          <animate
+            attributeName="width"
+            begin="svgSpinnersBlocksWave0.begin+0.3s"
+            dur="0.9s"
+            values="7.33;1.33;7.33"
+          />
+          <animate
+            attributeName="height"
+            begin="svgSpinnersBlocksWave0.begin+0.3s"
+            dur="0.9s"
+            values="7.33;1.33;7.33"
+          />
+        </rect>
+        <rect width="7.33" height="7.33" x="1" y="15.66" fill="white">
+          <animate
+            attributeName="x"
+            begin="svgSpinnersBlocksWave0.begin+0.3s"
+            dur="0.9s"
+            values="1;4;1"
+          />
+          <animate
+            attributeName="y"
+            begin="svgSpinnersBlocksWave0.begin+0.3s"
+            dur="0.9s"
+            values="15.66;18.66;15.66"
+          />
+          <animate
+            attributeName="width"
+            begin="svgSpinnersBlocksWave0.begin+0.3s"
+            dur="0.9s"
+            values="7.33;1.33;7.33"
+          />
+          <animate
+            attributeName="height"
+            begin="svgSpinnersBlocksWave0.begin+0.3s"
+            dur="0.9s"
+            values="7.33;1.33;7.33"
+          />
+        </rect>
+        <rect width="7.33" height="7.33" x="15.66" y="8.33" fill="white">
+          <animate
+            attributeName="x"
+            begin="svgSpinnersBlocksWave0.begin+0.45s"
+            dur="0.9s"
+            values="15.66;18.66;15.66"
+          />
+          <animate
+            attributeName="y"
+            begin="svgSpinnersBlocksWave0.begin+0.45s"
+            dur="0.9s"
+            values="8.33;11.33;8.33"
+          />
+          <animate
+            attributeName="width"
+            begin="svgSpinnersBlocksWave0.begin+0.45s"
+            dur="0.9s"
+            values="7.33;1.33;7.33"
+          />
+          <animate
+            attributeName="height"
+            begin="svgSpinnersBlocksWave0.begin+0.45s"
+            dur="0.9s"
+            values="7.33;1.33;7.33"
+          />
+        </rect>
+        <rect width="7.33" height="7.33" x="8.33" y="15.66" fill="white">
+          <animate
+            attributeName="x"
+            begin="svgSpinnersBlocksWave0.begin+0.45s"
+            dur="0.9s"
+            values="8.33;11.33;8.33"
+          />
+          <animate
+            attributeName="y"
+            begin="svgSpinnersBlocksWave0.begin+0.45s"
+            dur="0.9s"
+            values="15.66;18.66;15.66"
+          />
+          <animate
+            attributeName="width"
+            begin="svgSpinnersBlocksWave0.begin+0.45s"
+            dur="0.9s"
+            values="7.33;1.33;7.33"
+          />
+          <animate
+            attributeName="height"
+            begin="svgSpinnersBlocksWave0.begin+0.45s"
+            dur="0.9s"
+            values="7.33;1.33;7.33"
+          />
+        </rect>
+        <rect width="7.33" height="7.33" x="15.66" y="15.66" fill="white">
+          <animate
+            id="svgSpinnersBlocksWave1"
+            attributeName="x"
+            begin="svgSpinnersBlocksWave0.begin+0.6s"
+            dur="0.9s"
+            values="15.66;18.66;15.66"
+          />
+          <animate
+            attributeName="y"
+            begin="svgSpinnersBlocksWave0.begin+0.6s"
+            dur="0.9s"
+            values="15.66;18.66;15.66"
+          />
+          <animate
+            attributeName="width"
+            begin="svgSpinnersBlocksWave0.begin+0.6s"
+            dur="0.9s"
+            values="7.33;1.33;7.33"
+          />
+          <animate
+            attributeName="height"
+            begin="svgSpinnersBlocksWave0.begin+0.6s"
+            dur="0.9s"
+            values="7.33;1.33;7.33"
+          />
+        </rect>
+      </svg>
+    </div>
+  );
+};
+
+export default IntroAnimation;

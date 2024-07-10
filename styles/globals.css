@@ -31,3 +31,105 @@ body {
     text-wrap: balance;
   }
 }
+
+.active {
+  border-color: #5521b5;
+}
+
+@keyframes move {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes aimove {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes iconScale {
+  from {
+    scale: 1;
+  }
+  to {
+    scale: 1.4;
+  }
+}
+
+.iconAnim:hover {
+  animation: iconScale 0.8s ease forwards;
+}
+
+.animationBox {
+  opacity: 0;
+  animation: move 0.5s ease forwards;
+}
+
+button.animationBox {
+  animation-delay: 0.3s;
+}
+
+.aioAnimation {
+  opacity: 0;
+  animation: aimove 0.5s ease forwards;
+  animation-delay: 0.8s;
+}
+
+::-webkit-input-placeholder {
+  text-align: center;
+  font-size: x-small;
+}
+:-moz-placeholder {
+  text-align: center;
+}
+::-moz-placeholder {
+  text-align: center;
+}
+:-ms-input-placeholder {
+  text-align: center;
+}
+
+::-webkit-input-placeholder {
+  text-align: center;
+}
+
+.text-base-label .material-tailwind-label {
+  font-size: 3rem;
+}
+
+.custom-placeholder::placeholder {
+  opacity: 1 !important;
+  color: white;
+}
+
+.introAnim {
+  clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+  transition: clip-path 2s ease-out;
+  transition-delay: 2s;
+}
+
+.animate-mask {
+  clip-path: polygon(0 0, 100% 0%, 100% 0, 0 0);
+}
+
+.hAnim {
+  opacity: 1;
+  transition: opacity 2s ease;
+  transition-delay: 1s;
+}
+
+.hAnim2 {
+  opacity: 0;
+}
+

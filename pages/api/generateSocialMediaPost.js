@@ -1,4 +1,3 @@
-// pages/api/generate-content.js
 import OpenAI from "openai";
 
 const openai = new OpenAI({
@@ -7,9 +6,9 @@ const openai = new OpenAI({
 
 export default async function handler(req, res) {
   if (req.method === "POST") {
-    const { role, type, topic, style, language } = req.body;
+    const { Platform, Style, Tone, Audience, Hastags, About } = req.body;
 
-    if (!role || !type || !topic) {
+    if (!Platform || !Style || !Tone || !Audience) {
       return res.status(400).json({ error: "Missing required fields" });
     }
 
@@ -19,17 +18,15 @@ export default async function handler(req, res) {
           {
             role: "system",
             content:
-              "You are a writer for any kind of blogs, posts etc. Act like you are professional.",
+              "You are a Social Media Content Creator and help the user create Social Media Post. Act like you are a professional.",
           },
           {
             role: "user",
-            content: `I am a ${role}. I need a ${type} about ${topic}. Write it in ${style} style and in the language ${language}`,
+            content: `Make a Social Media Post for ${Platform}. Write it in style ${Style} and tonality ${Tone}.My Audience are ${Audience}. Write about ${About} and use this hastags ${Hastags}`,
           },
         ],
         model: "gpt-3.5-turbo",
       });
-      console.log(response.choices[0].message.content.toString());
-
       res
         .status(200)
         .json({ content: response.choices[0].message.content.toString() });
